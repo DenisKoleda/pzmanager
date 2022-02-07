@@ -24,3 +24,11 @@ with Client('109.195.19.162', 27015, passwd='8TNvxsxJDp') as client:
 online = online.split('\n')[0]
 
 print(online)
+
+# Отображение колличества игроков только число
+with Client('109.195.19.162', 27015, passwd='8TNvxsxJDp') as client:
+    online = client.run('players')
+
+online = online.split(')')[0].split('(')[1]
+
+print(online)
