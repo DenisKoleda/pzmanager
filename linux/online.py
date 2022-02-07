@@ -21,7 +21,7 @@ print(online)
 with Client('109.195.19.162', 27015, passwd='8TNvxsxJDp') as client:
     online = client.run('players')
 
-online = online.split('\n')[0]
+online = online.split('\n')[0].split(':')[0]
 
 print(online)
 
